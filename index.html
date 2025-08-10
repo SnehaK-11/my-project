@@ -1,76 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mood Palette 🎨</title>
+  <title>DevOps Lifecycle</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
+      font-family: Arial;
+      background: coral;
       margin: 0;
-      padding: 20px;
+      padding: 40px;
       text-align: center;
     }
 
+    h1 {
+      margin-bottom: 40px;
+    }
+
     .container {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .buttons button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      background-color: #007bff;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    .buttons button:hover {
-      background-color: #0056b3;
-    }
-
-    .palette {
-      margin-top: 20px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .color-box {
+    .circle {
+      background-color:red;
+      color: white;
       width: 100px;
       height: 100px;
-      margin: 10px;
-      border-radius: 8px;
-      color: #fff;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 14px;
+      margin: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .arrow-down {
+      width: 2px;
+      height: 30px;
+      background-color: solid black;
+      position: relative;
+    }
+
+    .arrow-down::after {
+      content: '';
+      position: absolute;
+      left: -5px;
+      bottom: -10px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid #333;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-style: italic;
+      color: #666;
     }
   </style>
 </head>
 <body>
+  <h1>DevOps Lifecycle</h1>
+
   <div class="container">
-    <h1>Mood Palette 🎨</h1>
-    <p>Select your mood to generate a color palette:</p>
-    <div class="buttons">
-      <button onclick="generatePalette('happy')">😊 Happy</button>
-      <button onclick="generatePalette('calm')">😌 Calm</button>
-      <button onclick="generatePalette('energetic')">⚡ Energetic</button>
-      <button onclick="generatePalette('sad')">😢 Sad</button>
-    </div>
-    <div id="palette" class="palette"></div>
+    <div class="circle">Plan</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Develop</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Build</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Test</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Release</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Deploy</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Operate</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Monitor</div>
+    <div class="arrow-down"></div>
+
+    <div class="circle">Plan</div>
   </div>
 </body>
 </html>
-
